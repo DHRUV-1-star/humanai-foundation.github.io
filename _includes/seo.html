@@ -1,0 +1,24 @@
+<!-- SEO and OpenGraph Tags -->
+<meta name="description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 }}">
+
+<!-- OpenGraph (Facebook, LinkedIn, Discord) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+<meta property="og:title" content="{{ page.title | default: site.title }}">
+<meta property="og:description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 }}">
+{% if page.logo %}
+<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/images/{{ page.logo }}">
+{% else %}
+<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/images/humanai.jpg">
+{% endif %}
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+<meta name="twitter:title" content="{{ page.title | default: site.title }}">
+<meta name="twitter:description" content="{{ page.description | default: site.description | strip_html | normalize_whitespace | truncate: 160 }}">
+{% if page.logo %}
+<meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/images/{{ page.logo }}">
+{% else %}
+<meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/images/humanai.jpg">
+{% endif %}
